@@ -1,8 +1,8 @@
 {
-  "name": "quizgame-ethanl66",
+  "name": "quizgame3-ethanl66",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel serve ./src/index.html",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/staten-island-tech/quizgame-ethanl66.git"
+    "url": "git+https://github.com/ethanl66/quizgame3-ethanl66.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/staten-island-tech/quizgame-ethanl66/issues"
+    "url": "https://github.com/ethanl66/quizgame3-ethanl66/issues"
   },
-  "homepage": "https://github.com/staten-island-tech/quizgame-ethanl66#readme",
+  "homepage": "https://github.com/ethanl66/quizgame3-ethanl66#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
     "parcel": "^2.0.0-beta.2"
