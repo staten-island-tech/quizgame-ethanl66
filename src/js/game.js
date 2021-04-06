@@ -1252,4 +1252,4 @@ document.getElementById("choice7").addEventListener("click", function () {
 
 //console.log(DOMSelectors.displayContainer);
 
-/* sssssssssssssssss */
+/* Whalen fix npm good. Work branch. */
