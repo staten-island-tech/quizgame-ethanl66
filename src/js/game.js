@@ -81,3 +81,5 @@ allChoicesCheckbox.forEach(function (choice) {
     }
   });
 });
+
+//NEXT: GET IT TO GO TO THE RIGHT QUESTIONS
