@@ -88,19 +88,70 @@ const checklistColorApplication = function () {
   });
 };
 
-nonChecklistColorApplication();
-checklistColorApplication();
+const goToNextQuestion = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    //QUESTION 1 NEXT QUESTIONS
+    const selectedChoiceDataNumber = document.querySelector("p.correct").dataset
+      .number;
+    /*  console.log(
+    "The data-number attribute of your selection is " + selectedChoiceDataNumber
+  ); */
 
-//NEXT: GET IT TO GO TO THE RIGHT QUESTIONS
-//Find which choice has class of "correct", get ID of the choice that has class of "correct",
+    const questionFunctions = {
+      question1: function () {
+        question1();
+        nonChecklistColorApplication();
+        goToNextQuestion();
+      },
+      question2: function () {
+        question2();
+        nonChecklistColorApplication();
+        goToNextQuestion();
+      },
+      question3: function () {
+        question3();
+        nonChecklistColorApplication();
+        goToNextQuestion();
+      },
+      question4: function () {
+        question4();
+        nonChecklistColorApplication();
+        goToNextQuestion();
+      },
+      question5: function () {
+        question5();
+        nonChecklistColorApplication();
+        goToNextQuestion();
+      },
+      question6: function () {
+        question6();
+        checklistColorApplication();
+        goToNextQuestion();
+      },
+      question7: function () {
+        question7();
+        checklistColorApplication();
+        goToNextQuestion();
+      },
+      question8: function () {
+        question8();
+        nonChecklistColorApplication();
+        goToNextQuestion();
+      },
+      question9: function () {
+        question9();
+        nonChecklistColorApplication();
+        goToNextQuestion();
+      },
+      question10: function () {
+        question10();
+        nonChecklistColorApplication();
+        goToNextQuestion();
+      },
+    };
+    questionFunctions["question" + selectedChoiceDataNumber]();
 
-//NEXT QUESTION
-document.getElementById("nextButton").addEventListener("click", function () {
-  //QUESTION 1 NEXT QUESTIONS
-  const selectedChoiceID = document.querySelector("p.correct").id;
-  console.log(selectedChoiceID + " has been selected.");
-
-  /* BAD CODE  
+    /* BAD CODE  
   
   if (selectedChoiceID === "choice1-1") {
     question2();
@@ -131,7 +182,19 @@ document.getElementById("nextButton").addEventListener("click", function () {
     checklistColorApplication();
   } */
 
-  //QUESTIONS 2-5 NEXT QUESTION
-  //const selectedChoiceClass = document.querySelectorAll("p.correct").className;
-  //console.log(selectedChoiceClass);
-});
+    //QUESTIONS 2-5 NEXT QUESTION
+    //const selectedChoiceClass = document.querySelectorAll("p.correct").className;
+    //console.log(selectedChoiceClass);
+  });
+};
+
+//question1();
+nonChecklistColorApplication();
+goToNextQuestion();
+
+//NEXT: GET IT TO GO TO THE RIGHT QUESTIONS
+//Find which choice has class of "correct", get ID of the choice that has class of "correct",
+
+//NEXT QUESTION
+
+//sss
