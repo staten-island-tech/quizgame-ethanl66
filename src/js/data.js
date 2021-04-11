@@ -18501,3 +18501,5 @@ const animes = [
     netscore: 84,
   },
 ];
+
+export { animes };

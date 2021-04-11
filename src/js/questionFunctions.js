@@ -37,10 +37,10 @@ const question1 = function () {
               <p class="choice-text choice-text-one choice1-6" id="choice1-6"  data-number="6">${questionsList[0].choice6.text}</p>
       </div>
       
-      <div class="choice-container">
+      <!-- <div class="choice-container">
               <p class="choice-prefix">G</p>
               <p class="choice-text choice-text-one choice1-7" id="choice1-7"  data-number="6">${questionsList[0].choice7.text}</p>
-      </div>
+      </div> -->
       
       <button id="nextButton">Next</button>`
   );

@@ -1,5 +1,6 @@
 import { DOMSelectors } from "./DOM";
 import { questionsList } from "./questions.js";
+import { animes } from "./data";
 import {
   question1,
   question2,
@@ -133,6 +134,71 @@ const goToNextQuestion = function () {
 };
 
 nonChecklistColorApplication();
-goToNextQuestion();
+//goToNextQuestion();
 
-//sss
+//
+// FILTERING--------------------------------------------------
+//
+
+const filter = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    //choice1-1 filter
+    if (document.getElementById("choice1-1").classList.contains("correct")) {
+      const filtered1 = animes.filter((anime) =>
+        anime.genre.includes(
+          "Comedy" ||
+            "Drama" ||
+            "Music" ||
+            "Mystery" ||
+            "Romance" ||
+            "Slife of Life"
+        )
+      );
+      console.log(filtered1);
+    }
+    //choice1-2 filter
+    if (document.getElementById("choice1-2").classList.contains("correct")) {
+      const filtered1 = animes.filter((anime) =>
+        anime.genre.includes(
+          "Action" || "Comedy" || "Drama" || "Horror" || "Mystery" || "Sports"
+        )
+      );
+      console.log(filtered1);
+    }
+    //choice1-3 filter
+    if (document.getElementById("choice1-3").classList.contains("correct")) {
+      const filtered1 = animes.filter((anime) =>
+        anime.genre.includes(
+          "Comedy" || "Drama" || "Music" || "Romance" || "Slice of Life"
+        )
+      );
+      console.log(filtered1);
+    }
+    //choice1-4 filter
+    if (document.getElementById("choice1-4").classList.contains("correct")) {
+      const filtered1 = animes.filter((anime) =>
+        anime.genre.includes(
+          "Action" || "Comedy" || "Drama" || "Horror" || "Mystery" || "Sports"
+        )
+      );
+      console.log(filtered1);
+    }
+    //choice1-5 filter
+    if (document.getElementById("choice1-5").classList.contains("correct")) {
+      const filtered1 = animes.filter((anime) =>
+        anime.genre.includes("Comedy" || "Music" || "Slice of Life")
+      );
+      console.log(filtered1);
+    }
+    //choice1-6 filter
+    if (document.getElementById("choice1-6").classList.contains("correct")) {
+      const filtered1 = animes.filter((anime) =>
+        anime.genre.includes("Action" || "Comedy" || "Sports")
+      );
+      console.log(filtered1);
+    }
+  });
+};
+filter();
+
+//ssss
