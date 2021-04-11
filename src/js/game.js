@@ -115,7 +115,7 @@ const goToNextQuestion = function () {
       },
       question8: function () {
         question8();
-        nonChecklistColorApplication();
+        checklistColorApplication();
         goToNextQuestion();
       },
       question9: function () {
