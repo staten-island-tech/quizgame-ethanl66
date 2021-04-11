@@ -71,12 +71,18 @@ const checklistColorApplication = function () {
 
   allChoicesCheckbox.forEach(function (choice) {
     choice.addEventListener("click", function (choice) {
-      //Add green
       const target = choice.target;
-      if (target.matches("p")) {
+      //Remove green if already green
+      if (target.classList.contains("correct")) {
+        console.log("Already correct");
+        target.classList.remove("correct");
+      }
+      //Add green
+      else {
         target.classList.add("correct");
         document.querySelector("p.none-of-these").classList.remove("correct");
       }
+
       if (target.matches("p.none-of-these")) {
         allChoicesCheckbox.forEach(function (choice) {
           choice.classList.remove("correct");
