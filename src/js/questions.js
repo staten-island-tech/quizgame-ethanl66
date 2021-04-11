@@ -105,7 +105,7 @@ let questionsList = [
     choice1: { text: "Before 1989", nextQuestion: 9 },
     choice2: { text: "1990-1999", nextQuestion: 9 },
     choice3: { text: "2000-2009", nextQuestion: 9 },
-    choice4: { text: "2010-present", nextQuestion: 9 },
+    choice4: { text: "2010-2020", nextQuestion: 9 },
   },
   {
     questionNum: 9,
