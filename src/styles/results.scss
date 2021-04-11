@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 .results-container {
   display: flex;
   flex-direction: column;
@@ -79,6 +81,23 @@
   color: red;
 }
 
+.retake-quiz-btn {
+  display: flex;
+  align-self: center;
+  text-decoration: none;
+  padding: 1.5rem 2rem;
+  margin-top: 3rem;
+  background-color: #4a8dc8;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+}
+
+.retake-quiz-btn:hover {
+  background-color: rgb(189, 0, 0);
+  color: 56a5eb;
+  @include btnhover;
+}
+
 /* @media screen and (max-height: 750px) {
   .results-home {
     height: 79vh;
@@ -88,3 +107,5 @@
     margin-top: 0.1rem;
   }
 } ; */
+
+//s
