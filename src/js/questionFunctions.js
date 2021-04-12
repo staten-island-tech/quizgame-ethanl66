@@ -214,62 +214,62 @@ const question7 = function () {
           
           '<div class="choice-container">
               <p class="choice-prefix">A</p>
-              <p class="choice-text choice-text-checkbox question-7" id="choice-7-1" data-number="8">${questionsList[6].choice1.text}</p>
+              <p class="choice-text choice-text-checkbox question-7" id="choice-7-1" data-number="9">${questionsList[6].choice1.text}</p>
           </div>
       
           <div class="choice-container">
               <p class="choice-prefix">B</p>
-              <p class="choice-text choice-text-checkbox question-7" id="choice-7-2" data-number="8">${questionsList[6].choice2.text}</p>
+              <p class="choice-text choice-text-checkbox question-7" id="choice-7-2" data-number="9">${questionsList[6].choice2.text}</p>
           </div>
       
           <div class="choice-container">
                   <p class="choice-prefix">C</p>
-                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-3" data-number="8">${questionsList[6].choice3.text}</p>
+                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-3" data-number="9">${questionsList[6].choice3.text}</p>
           </div>
           
           <div class="choice-container">
                   <p class="choice-prefix">D</p>
-                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-4" data-number="8">${questionsList[6].choice4.text}</p>
+                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-4" data-number="9">${questionsList[6].choice4.text}</p>
           </div>
           
           <div class="choice-container">
                   <p class="choice-prefix">E</p>
-                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-5" data-number="8">${questionsList[6].choice5.text}</p>
+                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-5" data-number="9">${questionsList[6].choice5.text}</p>
           </div>
           
           <div class="choice-container">
                   <p class="choice-prefix">F</p>
-                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-6" data-number="8">${questionsList[6].choice6.text}</p>
+                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-6" data-number="9">${questionsList[6].choice6.text}</p>
           </div>
           
           <div class="choice-container">
                   <p class="choice-prefix">G</p>
-                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-7" data-number="8">${questionsList[6].choice7.text}</p>
+                  <p class="choice-text choice-text-checkbox question-7" id="choice-7-7" data-number="9">${questionsList[6].choice7.text}</p>
           </div>
           
           <div class="choice-container">
           <p class="choice-prefix">H</p>
-          <p class="choice-text choice-text-checkbox question-7" id="choice-7-8" data-number="8">${questionsList[6].choice8.text}</p>
+          <p class="choice-text choice-text-checkbox question-7" id="choice-7-8" data-number="9">${questionsList[6].choice8.text}</p>
           </div>
     
           <div class="choice-container">
           <p class="choice-prefix">I</p>
-          <p class="choice-text choice-text-checkbox question-7" id="choice-7-9" data-number="8">${questionsList[6].choice9.text}</p>
+          <p class="choice-text choice-text-checkbox question-7" id="choice-7-9" data-number="9">${questionsList[6].choice9.text}</p>
           </div>
           
           <div class="choice-container">
           <p class="choice-prefix">J</p>
-          <p class="choice-text choice-text-checkbox question-7" id="choice-7-10" data-number="8">${questionsList[6].choice10.text}</p>
+          <p class="choice-text choice-text-checkbox question-7" id="choice-7-10" data-number="9">${questionsList[6].choice10.text}</p>
           </div>
           
           <div class="choice-container">
           <p class="choice-prefix">K</p>
-          <p class="choice-text choice-text-checkbox question-7" id="choice-7-11" data-number="8">${questionsList[6].choice11.text}</p>
+          <p class="choice-text choice-text-checkbox question-7" id="choice-7-11" data-number="9">${questionsList[6].choice11.text}</p>
           </div>
           
           <div class="choice-container">
           <p class="choice-prefix">L</p>
-          <p class="choice-text choice-text-checkbox question-7 none-of-these" id="choice-7-12" data-number="8">${questionsList[6].choice12.text}</p>
+          <p class="choice-text choice-text-checkbox question-7 none-of-these" id="choice-7-12" data-number="9">${questionsList[6].choice12.text}</p>
           </div>      
 
           <button id="nextButton">Next</button>`
@@ -284,22 +284,22 @@ const question8 = function () {
               
               '<div class="choice-container">
                   <p class="choice-prefix">A</p>
-                  <p class="choice-text choice-text-one question-8" id="choice-8-1" data-number="9">${questionsList[7].choice1.text}</p>
+                  <p class="choice-text choice-text-checkbox choice-text-one question-8" id="choice-8-1" data-number="9">${questionsList[7].choice1.text}</p>
               </div>
           
               <div class="choice-container">
                   <p class="choice-prefix">B</p>
-                  <p class="choice-text choice-text-one question-8" id="choice-8-2" data-number="9">${questionsList[7].choice2.text}</p>
+                  <p class="choice-text choice-text-checkbox choice-text-one question-8" id="choice-8-2" data-number="9">${questionsList[7].choice2.text}</p>
               </div>
           
               <div class="choice-container">
                       <p class="choice-prefix">C</p>
-                      <p class="choice-text choice-text-one question-8" id="choice-8-3" data-number="9">${questionsList[7].choice3.text}</p>
+                      <p class="choice-text choice-text-checkbox choice-text-one question-8" id="choice-8-3" data-number="9">${questionsList[7].choice3.text}</p>
               </div>
               
               <div class="choice-container">
               <p class="choice-prefix">B</p>
-              <p class="choice-text choice-text-one question-8" id="choice-8-4" data-number="9">${questionsList[7].choice4.text}</p>
+              <p class="choice-text choice-text-checkbox choice-text-one question-8" id="choice-8-4" data-number="9">${questionsList[7].choice4.text}</p>
               </div>      
 
       <button id="nextButton">Next</button>`

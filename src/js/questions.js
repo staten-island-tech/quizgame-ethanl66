@@ -36,7 +36,7 @@ let questionsList = [
   },
   {
     questionNum: 4,
-    question: "Do you want something laid-back or something with drama?", //IF choice3    //value: 3,
+    question: "Do you want something chill or something with drama?", //IF choice3    //value: 3,
     choice1: { text: "Something chill", nextQuestion: 6 }, //Must not have drama
     choice2: { text: "Drama", nextQuestion: 6 }, //Must have drama
     choice3: { text: "Don't care", nextQuestion: 6 }, //Can be both (no action)

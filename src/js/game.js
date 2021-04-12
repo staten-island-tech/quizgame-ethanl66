@@ -81,124 +81,410 @@ const goToNextQuestion = function () {
       question1: function () {
         question1();
         nonChecklistColorApplication();
+        filterQuestionOne;
         goToNextQuestion();
       },
       question2: function () {
         question2();
         nonChecklistColorApplication();
+        filterQuestionTwo();
         goToNextQuestion();
       },
       question3: function () {
         question3();
         nonChecklistColorApplication();
+        filterQuestionThree();
         goToNextQuestion();
       },
       question4: function () {
         question4();
         nonChecklistColorApplication();
+        filterQuestionFour();
         goToNextQuestion();
       },
       question5: function () {
         question5();
         nonChecklistColorApplication();
+        filterQuestionFive();
         goToNextQuestion();
       },
       question6: function () {
         question6();
         checklistColorApplication();
+        filterQuestionSix();
         goToNextQuestion();
       },
       question7: function () {
         question7();
         checklistColorApplication();
+        filterQuestionSeven();
         goToNextQuestion();
       },
       question8: function () {
         question8();
         checklistColorApplication();
-        goToNextQuestion();
+        //goToNextQuestion();
       },
       question9: function () {
         question9();
         nonChecklistColorApplication();
-        goToNextQuestion();
+        //goToNextQuestion();
       },
       question10: function () {
         question10();
         nonChecklistColorApplication();
-        goToNextQuestion();
+        //goToNextQuestion();
       },
     };
     questionFunctions["question" + selectedChoiceDataNumber]();
   });
 };
 
-nonChecklistColorApplication();
-//goToNextQuestion();
-
 //
 // FILTERING--------------------------------------------------
 //
 
-const filter = function () {
+const filterQuestionOne = function () {
   document.getElementById("nextButton").addEventListener("click", function () {
     //choice1-1 filter
     if (document.getElementById("choice1-1").classList.contains("correct")) {
-      const filtered1 = animes.filter((anime) =>
-        anime.genre.includes(
-          "Comedy" ||
-            "Drama" ||
-            "Music" ||
-            "Mystery" ||
-            "Romance" ||
-            "Slife of Life"
-        )
+      filtered1 = animes.filter(
+        (anime) =>
+          anime.genre.includes("Comedy") ||
+          anime.genre.includes("Drama") ||
+          anime.genre.includes("Music") ||
+          anime.genre.includes("Romance") ||
+          anime.genre.includes("Slice of Life")
       );
       console.log(filtered1);
     }
     //choice1-2 filter
     if (document.getElementById("choice1-2").classList.contains("correct")) {
-      const filtered1 = animes.filter((anime) =>
-        anime.genre.includes(
-          "Action" || "Comedy" || "Drama" || "Horror" || "Mystery" || "Sports"
-        )
+      filtered1 = animes.filter(
+        (anime) =>
+          anime.genre.includes("Action") ||
+          anime.genre.includes("Comedy") ||
+          anime.genre.includes("Drama") ||
+          anime.genre.includes("Horror") ||
+          anime.genre.includes("Mystery") ||
+          anime.genre.includes("Sports")
       );
       console.log(filtered1);
     }
     //choice1-3 filter
     if (document.getElementById("choice1-3").classList.contains("correct")) {
-      const filtered1 = animes.filter((anime) =>
-        anime.genre.includes(
-          "Comedy" || "Drama" || "Music" || "Romance" || "Slice of Life"
-        )
+      filtered1 = animes.filter(
+        (anime) =>
+          anime.genre.includes("Comedy") ||
+          anime.genre.includes("Drama") ||
+          anime.genre.includes("Music") ||
+          anime.genre.includes("Romance") ||
+          anime.genre.includes("Slice of Life")
       );
       console.log(filtered1);
     }
     //choice1-4 filter
     if (document.getElementById("choice1-4").classList.contains("correct")) {
-      const filtered1 = animes.filter((anime) =>
-        anime.genre.includes(
-          "Action" || "Comedy" || "Drama" || "Horror" || "Mystery" || "Sports"
-        )
+      filtered1 = animes.filter(
+        (anime) =>
+          anime.genre.includes("Action") ||
+          anime.genre.includes("Comedy") ||
+          anime.genre.includes("Drama") ||
+          anime.genre.includes("Horror") ||
+          anime.genre.includes("Mystery") ||
+          anime.genre.includes("Sports")
       );
       console.log(filtered1);
     }
     //choice1-5 filter
     if (document.getElementById("choice1-5").classList.contains("correct")) {
-      const filtered1 = animes.filter((anime) =>
-        anime.genre.includes("Comedy" || "Music" || "Slice of Life")
+      filtered1 = animes.filter(
+        (anime) =>
+          anime.genre.includes("Comedy") ||
+          anime.genre.includes("Music") ||
+          anime.genre.includes("Slice of Life")
       );
       console.log(filtered1);
     }
     //choice1-6 filter
     if (document.getElementById("choice1-6").classList.contains("correct")) {
-      const filtered1 = animes.filter((anime) =>
-        anime.genre.includes("Action" || "Comedy" || "Sports")
+      filtered1 = animes.filter(
+        (anime) =>
+          anime.genre.includes("Action") ||
+          anime.genre.includes("Comedy") ||
+          anime.genre.includes("Sports")
       );
       console.log(filtered1);
     }
   });
 };
-filter();
+
+nonChecklistColorApplication();
+filterQuestionOne();
+goToNextQuestion();
+
+const filterQuestionTwo = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    //choice2-1 filter - must have mystery
+    if (document.getElementById("choice-2-1").classList.contains("correct")) {
+      filtered2 = filtered1.filter((anime) => anime.genre.includes("Mystery"));
+      console.log(filtered2);
+    }
+    //choice2-2 filter - must not have mystery
+    if (document.getElementById("choice-2-2").classList.contains("correct")) {
+      filtered2 = filtered1.filter(
+        (anime) => anime.genre.includes("Mystery") === false
+      );
+      console.log(filtered2);
+    }
+    if (document.getElementById("choice-2-3").classList.contains("correct")) {
+      filtered2 = filtered1;
+      console.log(filtered2);
+    }
+  });
+};
+
+const filterQuestionThree = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    //Choice-3-1 must be funny
+    if (document.getElementById("choice-3-1").classList.contains("correct")) {
+      filtered2 = filtered1.filter((anime) => anime.genre.includes("Comedy"));
+      console.log(filtered2);
+    }
+    //choice-3-2 must be dark
+    if (document.getElementById("choice-3-2").classList.contains("correct")) {
+      filtered2 = filtered1.filter((anime) => anime.genre.includes("Horror"));
+      console.log(filtered2);
+    }
+
+    if (document.getElementById("choice-3-3").classList.contains("correct")) {
+      filtered2 = filtered1.filter(
+        (anime) =>
+          anime.genre.includes("Comedy") && anime.genre.includes("Horror")
+      );
+      console.log(filtered2);
+    }
+    if (document.getElementById("choice-3-4").classList.contains("correct")) {
+      filtered2 = filtered1;
+      console.log(filtered2);
+    }
+  });
+};
+
+const filterQuestionFour = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    if (document.getElementById("choice-4-1").classList.contains("correct")) {
+      filtered2 = filtered1.filter(
+        (anime) => anime.genre.includes("Drama") === false
+      );
+      console.log(filtered2);
+    }
+    if (document.getElementById("choice-4-2").classList.contains("correct")) {
+      filtered2 = filtered1.filter((anime) => anime.genre.includes("Drama"));
+      console.log(filtered2);
+    }
+    if (document.getElementById("choice-4-3").classList.contains("correct")) {
+      filtered2 = filtered1;
+      console.log(filtered2);
+    }
+  });
+};
+
+const filterQuestionFive = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    if (document.getElementById("choice-5-1").classList.contains("correct")) {
+      filtered2 = filtered1.filter((anime) => anime.genre.includes("Horror"));
+      console.log(filtered2);
+    }
+    if (document.getElementById("choice-5-2").classList.contains("correct")) {
+      filtered2 = filtered1.filter(
+        (anime) => anime.genre.includes("Horror") === false
+      );
+      console.log(filtered2);
+    }
+    if (document.getElementById("choice-5-3").classList.contains("correct")) {
+      filtered2 = filtered1;
+      console.log(filtered2);
+    }
+  });
+};
+
+//QUESTION SIX
+const filterQuestionSix = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    const selections = [];
+
+    if (document.getElementById("choice-6-1").classList.contains("correct")) {
+      selections.push("Ecchi");
+    }
+    if (document.getElementById("choice-6-2").classList.contains("correct")) {
+      selections.push("Magic");
+    }
+    if (document.getElementById("choice-6-3").classList.contains("correct")) {
+      selections.push("Psychological");
+    }
+    if (document.getElementById("choice-6-4").classList.contains("correct")) {
+      selections.push("School");
+    }
+    if (document.getElementById("choice-6-5").classList.contains("correct")) {
+      selections.push("Sci-fi");
+    }
+    if (document.getElementById("choice-6-6").classList.contains("correct")) {
+      selections.push("Supernatural");
+    }
+    if (document.getElementById("choice-6-7").classList.contains("correct")) {
+      selections.push("Thriller");
+    }
+    if (document.getElementById("choice-6-8").classList.contains("correct")) {
+      selections.push("Vampires");
+    }
+    //FINAL QUESTION SIX ARRAY
+    console.log(selections);
+    filtered6 = filtered2.filter(
+      (anime) =>
+        anime.genre.includes(selections[0]) ||
+        anime.genre.includes(selections[1]) ||
+        anime.genre.includes(selections[2]) ||
+        anime.genre.includes(selections[3]) ||
+        anime.genre.includes(selections[4]) ||
+        anime.genre.includes(selections[5]) ||
+        anime.genre.includes(selections[6]) ||
+        anime.genre.includes(selections[7]) ||
+        anime.genre.includes(selections[8])
+    );
+    console.log(filtered6);
+
+    if (document.getElementById("choice-6-9").classList.contains("correct")) {
+      filtered6 = filtered2.filter(
+        (anime) =>
+          anime.genre.includes("Ecchi") === false &&
+          anime.genre.includes("Magic") === false &&
+          anime.genre.includes("Psychological") &&
+          anime.genre.includes("School") === false &&
+          anime.genre.includes("Sci-fi") === false &&
+          anime.genre.includes("Supernatural") === false &&
+          anime.genre.includes("Thriller") === false &&
+          anime.genre.includes("Vampires") === false
+      );
+      console.log(filtered6);
+    }
+  });
+};
+
+//QUESTION SEVEN
+const filterQuestionSeven = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    const selections = [];
+
+    if (document.getElementById("choice-7-1").classList.contains("correct")) {
+      selections.push("Dementia");
+    }
+    if (document.getElementById("choice-7-2").classList.contains("correct")) {
+      selections.push("Demons");
+    }
+    if (document.getElementById("choice-7-3").classList.contains("correct")) {
+      selections.push("Game");
+    }
+    if (document.getElementById("choice-7-4").classList.contains("correct")) {
+      selections.push("Harem");
+    }
+    if (document.getElementById("choice-7-5").classList.contains("correct")) {
+      selections.push("Historical");
+    }
+    if (document.getElementById("choice-7-6").classList.contains("correct")) {
+      selections.push("Mecha");
+    }
+    if (document.getElementById("choice-7-7").classList.contains("correct")) {
+      selections.push("Military");
+    }
+    if (document.getElementById("choice-7-8").classList.contains("correct")) {
+      selections.push("Parodies");
+    }
+    if (document.getElementById("choice-7-9").classList.contains("correct")) {
+      selections.push("Samurai");
+    }
+    if (document.getElementById("choice-7-10").classList.contains("correct")) {
+      selections.push("Space");
+    }
+    if (document.getElementById("choice-7-11").classList.contains("correct")) {
+      selections.push("Superpowers");
+    }
+    if (document.getElementById("choice-7-12").classList.contains("correct")) {
+      filtered7 = filtered6;
+      console.log(filtered7);
+    }
+    //FINAL QUESTION SEVEN ARRAY
+    console.log(selections);
+    filtered7 = filtered6.filter(
+      (anime) =>
+        anime.genre.includes(selections[0]) ||
+        anime.genre.includes(selections[1]) ||
+        anime.genre.includes(selections[2]) ||
+        anime.genre.includes(selections[3]) ||
+        anime.genre.includes(selections[4]) ||
+        anime.genre.includes(selections[5]) ||
+        anime.genre.includes(selections[6]) ||
+        anime.genre.includes(selections[7]) ||
+        anime.genre.includes(selections[8]) ||
+        anime.genre.includes(selections[9]) ||
+        anime.genre.includes(selections[10]) ||
+        anime.genre.includes(selections[11])
+    );
+    console.log(filtered7);
+  });
+};
+
+//QUESTION EIGHT
+/* const filterQuestionEight = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    const selections = [];
+
+    if (document.getElementById("choice-8-1").classList.contains("correct")) {
+      selections.push("Ecchi");
+    }
+    if (document.getElementById("choice-8-2").classList.contains("correct")) {
+      selections.push("Magic");
+    }
+    if (document.getElementById("choice-8-3").classList.contains("correct")) {
+      selections.push("Psychological");
+    }
+    if (document.getElementById("choice-8-4").classList.contains("correct")) {
+      selections.push("School");
+    }
+    
+    //FINAL QUESTION SIX ARRAY
+    console.log(selections);
+    filtered6 = filtered2.filter(
+      (anime) =>
+        anime.genre.includes(selections[0]) ||
+        anime.genre.includes(selections[1]) ||
+        anime.genre.includes(selections[2]) ||
+        anime.genre.includes(selections[3]) ||
+        anime.genre.includes(selections[4]) ||
+        anime.genre.includes(selections[5]) ||
+        anime.genre.includes(selections[6]) ||
+        anime.genre.includes(selections[7]) ||
+        anime.genre.includes(selections[8])
+    );
+    console.log(filtered6);
+
+    if (document.getElementById("choice-6-9").classList.contains("correct")) {
+      filtered6 = filtered2.filter(
+        (anime) =>
+          anime.genre.includes("Ecchi") === false &&
+          anime.genre.includes("Magic") === false &&
+          anime.genre.includes("Psychological") &&
+          anime.genre.includes("School") === false &&
+          anime.genre.includes("Sci-fi") === false &&
+          anime.genre.includes("Supernatural") === false &&
+          anime.genre.includes("Thriller") === false &&
+          anime.genre.includes("Vampires") === false
+      );
+      console.log(filtered6);
+    }
+  });
+}; */
+
+//QUESTION NINE
 
 //ssss
