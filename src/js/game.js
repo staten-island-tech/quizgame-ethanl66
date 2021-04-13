@@ -128,11 +128,13 @@ const goToNextQuestion = function () {
       question9: function () {
         question9();
         nonChecklistColorApplication();
-        //goToNextQuestion();
+        filterQuestionNine();
+        goToNextQuestion();
       },
       question10: function () {
         question10();
         nonChecklistColorApplication();
+        filterQuestionTen();
         //goToNextQuestion();
       },
     };
@@ -409,10 +411,7 @@ const filterQuestionSeven = function () {
     if (document.getElementById("choice-7-11").classList.contains("correct")) {
       selections.push("Superpowers");
     }
-    if (document.getElementById("choice-7-12").classList.contains("correct")) {
-      filtered7 = filtered6;
-      console.log(filtered7);
-    }
+
     //FINAL QUESTION SEVEN ARRAY
     console.log(selections);
     filtered7 = filtered6.filter(
@@ -431,6 +430,11 @@ const filterQuestionSeven = function () {
         anime.genre.includes(selections[11])
     );
     console.log(filtered7);
+
+    if (document.getElementById("choice-7-12").classList.contains("correct")) {
+      filtered7 = filtered6;
+      console.log(filtered7);
+    }
   });
 };
 
@@ -542,7 +546,7 @@ const filterQuestionTen = function () {
 
       const bottomFiveNumbers = [];
       while (bottomFiveNumbers.length < 12) {
-        const r = Math.floor(Math.random() * finalByRank.length) + 1;
+        const r = Math.floor(Math.random() * (finalByRank.length - 3)) + 1;
         if (bottomFiveNumbers.indexOf(r) === -1) bottomFiveNumbers.push(r);
       }
       console.log(bottomFiveNumbers);
@@ -592,7 +596,7 @@ const filterQuestionTen = function () {
 
       const bottomFiveNumbers = [];
       while (bottomFiveNumbers.length < 12) {
-        const r = Math.floor(Math.random() * 100) + 1;
+        const r = Math.floor(Math.random() * (finalByRank.length - 3)) + 1;
         if (bottomFiveNumbers.indexOf(r) === -1) bottomFiveNumbers.push(r);
       }
       console.log(bottomFiveNumbers);
@@ -638,4 +642,4 @@ export { finalArrayExport };
 /* alert(finalArrayExport); */
 //sssss
 
-//ssss
+//sssss
