@@ -1,6 +1,3 @@
-import { DOMSelectors } from "./DOM";
-import { finalArrayExport } from "./game";
-
 //HEIGHT OF BACKGROUND IMAGE SAME AS #HOME
 const resultsHome = document.getElementById("results-home");
 console.log(resultsHome);
