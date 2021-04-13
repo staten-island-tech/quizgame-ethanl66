@@ -619,9 +619,6 @@ const filterQuestionTen = function () {
 
       const finalArray = finalTopFive.concat(finalBottomFive);
       console.log(finalArray);
-
-      console.log(finalArray);
-      alert(finalArray);
     }
 
     if (document.getElementById("choice-10-3").classList.contains("correct")) {
@@ -629,9 +626,6 @@ const filterQuestionTen = function () {
       console.log(finalByRank);
       finalArray = finalByRank.slice(0, 15);
       console.log(finalArray);
-
-      console.log(finalArray);
-      alert(finalArray);
     }
   });
 };
