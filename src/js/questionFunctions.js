@@ -357,7 +357,7 @@ const question10 = function () {
                       <p class="choice-text choice-text-one" id="choice-10-3">${questionsList[9].choice3.text}</p>
               </div>
                     
-           <a href="./results.html" class="btn finish-button" id="nextButton" >Get Results</a>`
+           <a class="btn finish-button" id="nextButton" href="results.html">Get Results</a>`
   );
 };
 
