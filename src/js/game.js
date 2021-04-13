@@ -623,4 +623,6 @@ const filterQuestionTen = function () {
 const finalArrayExport = finalArray;
 
 export { finalArrayExport };
+
+console.log(finalArrayExport);
 //ssss
