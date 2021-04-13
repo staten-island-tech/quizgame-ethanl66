@@ -516,6 +516,13 @@ const filterQuestionNine = function () {
 //QUESTION TEN
 const filterQuestionTen = function () {
   document.getElementById("nextButton").addEventListener("click", function () {
+    if (filtered9.length < 20) {
+      DOMSelectors.gameBox.innerHTML = "";
+      DOMSelectors.gameBox.insertAdjacentHTML(
+        "afterbegin",
+        `<h2 id="question">We could not find any results! You have been too specific in your selection criteria.</h2>`
+      );
+    }
     if (document.getElementById("choice-10-1").classList.contains("correct")) {
       //Rank by popularity
       byPopularityRank = filtered9.slice(0).sort(function (a, b) {
@@ -625,4 +632,4 @@ const finalArrayExport = finalArray;
 export { finalArrayExport };
 
 console.log(finalArrayExport);
-//ssss
+//sssss

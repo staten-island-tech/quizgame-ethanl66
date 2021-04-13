@@ -35,3 +35,10 @@ displayResults = function () {
 </div>`
   );
 };
+
+//s
+
+/* TO DO
+1) Make data.js bigger
+2) Fix results.html problems
+*/
