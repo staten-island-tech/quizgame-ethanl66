@@ -546,7 +546,7 @@ const filterQuestionTen = function () {
 
       const bottomFiveNumbers = [];
       while (bottomFiveNumbers.length < 12) {
-        const r = Math.floor(Math.random() * 100) + 1;
+        const r = Math.floor(Math.random() * finalByRank.length) + 1;
         if (bottomFiveNumbers.indexOf(r) === -1) bottomFiveNumbers.push(r);
       }
       console.log(bottomFiveNumbers);
