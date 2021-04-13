@@ -488,6 +488,4 @@ const filterQuestionSeven = function () {
 //QUESTION NINE
 
 export { finalArrayExport };
-
-console.log(finalArrayExport);
 //ssss
