@@ -486,6 +486,146 @@ const filterQuestionSeven = function () {
 }; */
 
 //QUESTION NINE
+const filterQuestionNine = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    if (document.getElementById("choice-9-1").classList.contains("correct")) {
+      filtered9 = filtered7.filter((anime) => anime.episodes <= 13);
+      console.log(filtered9);
+    }
+    if (document.getElementById("choice-9-2").classList.contains("correct")) {
+      filtered9 = filtered7.filter(
+        (anime) => anime.episodes > 13 && anime.episodes <= 26
+      );
+      console.log(filtered9);
+    }
+    if (document.getElementById("choice-9-3").classList.contains("correct")) {
+      filtered9 = filtered7.filter((anime) => anime.episodes < 26);
+      console.log(filtered9);
+    }
+    if (document.getElementById("choice-9-4").classList.contains("correct")) {
+      filtered9 = filtered7.filter((anime) => anime.episodes > 26);
+      console.log(filtered9);
+    }
+  });
+};
+
+//QUESTION TEN
+const filterQuestionTen = function () {
+  document.getElementById("nextButton").addEventListener("click", function () {
+    if (filtered9.length < 20) {
+      DOMSelectors.gameBox.innerHTML = "";
+      DOMSelectors.gameBox.insertAdjacentHTML(
+        "afterbegin",
+        `<h2 id="question">We could not find any results! You have been too specific in your selection criteria.</h2>`
+      );
+    }
+    if (document.getElementById("choice-10-1").classList.contains("correct")) {
+      //Rank by popularity
+      byPopularityRank = filtered9.slice(0).sort(function (a, b) {
+        return a.popularity - b.popularity;
+      });
+
+      //Remove first 30
+      byPopularityRankFirstRemoved = byPopularityRank.splice(0, 30);
+      //console.log(byPopularityRankFirstRemoved);
+      console.log(byPopularityRank);
+
+      //Sort by rank
+      finalByRank = byPopularityRank.sort(function (a, b) {
+        return a.Rank - b.Rank;
+      });
+      console.log(finalByRank);
+
+      //Final cleaned array
+      finalTopFive = finalByRank.slice(0, 3);
+      console.log(finalTopFive);
+
+      const bottomFiveNumbers = [];
+      while (bottomFiveNumbers.length < 12) {
+        const r = Math.floor(Math.random() * 100) + 1;
+        if (bottomFiveNumbers.indexOf(r) === -1) bottomFiveNumbers.push(r);
+      }
+      console.log(bottomFiveNumbers);
+
+      finalBottomFive = [
+        finalByRank[bottomFiveNumbers[0]],
+        finalByRank[bottomFiveNumbers[1]],
+        finalByRank[bottomFiveNumbers[2]],
+        finalByRank[bottomFiveNumbers[3]],
+        finalByRank[bottomFiveNumbers[4]],
+        finalByRank[bottomFiveNumbers[5]],
+        finalByRank[bottomFiveNumbers[6]],
+        finalByRank[bottomFiveNumbers[7]],
+        finalByRank[bottomFiveNumbers[8]],
+        finalByRank[bottomFiveNumbers[9]],
+        finalByRank[bottomFiveNumbers[10]],
+        finalByRank[bottomFiveNumbers[11]],
+      ];
+      console.log(finalBottomFive);
+
+      const finalArray = finalTopFive.concat(finalBottomFive);
+      console.log(finalArray);
+    }
+
+    if (document.getElementById("choice-10-2").classList.contains("correct")) {
+      //Rank by popularity
+      byPopularityRank = filtered9.slice(0).sort(function (a, b) {
+        return a.popularity - b.popularity;
+      });
+
+      //Remove first 8
+      byPopularityRankFirstRemovedFew = byPopularityRank.splice(0, 8);
+      console.log(byPopularityRank);
+
+      //Sort by rank
+      finalByRank = byPopularityRank.sort(function (a, b) {
+        return a.Rank - b.Rank;
+      });
+      console.log(finalByRank);
+
+      //Final cleaned array
+      finalTopFive = finalByRank.slice(0, 3);
+      console.log(finalTopFive);
+
+      const bottomFiveNumbers = [];
+      while (bottomFiveNumbers.length < 12) {
+        const r = Math.floor(Math.random() * 100) + 1;
+        if (bottomFiveNumbers.indexOf(r) === -1) bottomFiveNumbers.push(r);
+      }
+      console.log(bottomFiveNumbers);
+
+      finalBottomFive = [
+        finalByRank[bottomFiveNumbers[0]],
+        finalByRank[bottomFiveNumbers[1]],
+        finalByRank[bottomFiveNumbers[2]],
+        finalByRank[bottomFiveNumbers[3]],
+        finalByRank[bottomFiveNumbers[4]],
+        finalByRank[bottomFiveNumbers[5]],
+        finalByRank[bottomFiveNumbers[6]],
+        finalByRank[bottomFiveNumbers[7]],
+        finalByRank[bottomFiveNumbers[8]],
+        finalByRank[bottomFiveNumbers[9]],
+        finalByRank[bottomFiveNumbers[10]],
+        finalByRank[bottomFiveNumbers[11]],
+      ];
+      console.log(finalBottomFive);
+
+      const finalArray = finalTopFive.concat(finalBottomFive);
+      console.log(finalArray);
+    }
+
+    if (document.getElementById("choice-10-3").classList.contains("correct")) {
+      finalByRank = filtered9;
+      console.log(finalByRank);
+      finalArray = finalByRank.slice(0, 15);
+      console.log(finalArray);
+    }
+  });
+};
+
+const finalArrayExport = finalArray;
 
 export { finalArrayExport };
-//ssss
+
+console.log(finalArrayExport);
+//sssss
