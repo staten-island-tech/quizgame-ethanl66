@@ -129,7 +129,7 @@ const goToNextQuestion = function () {
         question9();
         nonChecklistColorApplication();
         filterQuestionNine();
-        //goToNextQuestion();
+        goToNextQuestion();
       },
       question10: function () {
         question10();
@@ -639,7 +639,7 @@ const filterQuestionTen = function () {
 const finalArrayExport = finalArray;
 export { finalArrayExport };
 
-alert(finalArrayExport);
+/* alert(finalArrayExport); */
 //sssss
 
 //ssss
