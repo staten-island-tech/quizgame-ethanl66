@@ -542,7 +542,7 @@ const filterQuestionTen = function () {
 
       const bottomFiveNumbers = [];
       while (bottomFiveNumbers.length < 12) {
-        const r = Math.floor(Math.random() * 100) + 1;
+        const r = Math.floor(Math.random() * finalByRank.length) + 1;
         if (bottomFiveNumbers.indexOf(r) === -1) bottomFiveNumbers.push(r);
       }
       console.log(bottomFiveNumbers);
@@ -565,6 +565,9 @@ const filterQuestionTen = function () {
 
       const finalArray = finalTopFive.concat(finalBottomFive);
       console.log(finalArray);
+
+      console.log(finalArray);
+      alert(finalArray);
     }
 
     if (document.getElementById("choice-10-2").classList.contains("correct")) {
@@ -612,6 +615,9 @@ const filterQuestionTen = function () {
 
       const finalArray = finalTopFive.concat(finalBottomFive);
       console.log(finalArray);
+
+      console.log(finalArray);
+      alert(finalArray);
     }
 
     if (document.getElementById("choice-10-3").classList.contains("correct")) {
@@ -619,15 +625,17 @@ const filterQuestionTen = function () {
       console.log(finalByRank);
       finalArray = finalByRank.slice(0, 15);
       console.log(finalArray);
+
+      console.log(finalArray);
+      alert(finalArray);
     }
   });
 };
 
 const finalArrayExport = finalArray;
-
 export { finalArrayExport };
 
-console.log(finalArrayExport);
+/* alert(finalArrayExport); */
 //sssss
 
 //ssss
