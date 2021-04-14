@@ -200,7 +200,7 @@ const filterQuestionOne = function () {
     }
     //choice1-5 filter
     if (document.getElementById("choice1-5").classList.contains("correct")) {
-      filtered1 = animes.filter(
+      filtered2 = animes.filter(
         (anime) =>
           anime.genre.includes("Comedy") ||
           anime.genre.includes("Music") ||
@@ -210,7 +210,7 @@ const filterQuestionOne = function () {
     }
     //choice1-6 filter
     if (document.getElementById("choice1-6").classList.contains("correct")) {
-      filtered1 = animes.filter(
+      filtered2 = animes.filter(
         (anime) =>
           anime.genre.includes("Action") ||
           anime.genre.includes("Comedy") ||
