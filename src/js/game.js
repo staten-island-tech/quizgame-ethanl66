@@ -206,7 +206,7 @@ const filterQuestionOne = function () {
           anime.genre.includes("Music") ||
           anime.genre.includes("Slice of Life")
       );
-      console.log(filtered1);
+      console.log(filtered2);
     }
     //choice1-6 filter
     if (document.getElementById("choice1-6").classList.contains("correct")) {
@@ -216,7 +216,7 @@ const filterQuestionOne = function () {
           anime.genre.includes("Comedy") ||
           anime.genre.includes("Sports")
       );
-      console.log(filtered1);
+      console.log(filtered2);
     }
   });
 };
@@ -596,7 +596,7 @@ const filterQuestionTen = function () {
 
       const bottomFiveNumbers = [];
       while (bottomFiveNumbers.length < 12) {
-        const r = Math.floor(Math.random() * (finalByRank.length - 3)) + 1;
+        const r = Math.floor(Math.random() * (finalByRank.length - 3));
         if (bottomFiveNumbers.indexOf(r) === -1) bottomFiveNumbers.push(r);
       }
       console.log(bottomFiveNumbers);
@@ -633,7 +633,7 @@ const filterQuestionTen = function () {
 const finalArrayExport = finalArray;
 export { finalArrayExport };
 
+//Add order final array by rank
 /* alert(finalArrayExport); */
-//sssss
 
 //sssss
