@@ -1,6 +1,6 @@
 import { DOMSelectors } from "./DOM";
 import { questionsList } from "./questions.js";
-import { animes } from "./data";
+import { animes } from "./data.js";
 import {
   question1,
   question2,
@@ -16,6 +16,19 @@ import {
 } from "./questionFunctions.js";
 
 question1();
+
+//HEIGHT OF BACKGROUND
+const adjustGameHeight = function () {
+  const gameBox = document.getElementById("game");
+  console.log(gameBox);
+  const gameBoxHeight = gameBox.offsetHeight;
+  console.log(gameBoxHeight);
+
+  const backgroundImage = document.getElementById("bg-image");
+  backgroundImage.style.height = gameBoxHeight + 175 + "px";
+  backgroundImage.style.minHeight = "100%";
+};
+adjustGameHeight();
 
 const nonChecklistColorApplication = function () {
   const allChoices = Array.from(document.querySelectorAll("p.choice-text-one"));
@@ -87,53 +100,62 @@ const goToNextQuestion = function () {
       },
       question2: function () {
         question2();
+        adjustGameHeight();
         nonChecklistColorApplication();
         filterQuestionTwo();
         goToNextQuestion();
       },
       question3: function () {
         question3();
+        adjustGameHeight();
         nonChecklistColorApplication();
         filterQuestionThree();
         goToNextQuestion();
       },
       question4: function () {
         question4();
+        adjustGameHeight();
         nonChecklistColorApplication();
         filterQuestionFour();
         goToNextQuestion();
       },
       question5: function () {
         question5();
+        adjustGameHeight();
         nonChecklistColorApplication();
         filterQuestionFive();
         goToNextQuestion();
       },
       question6: function () {
         question6();
+        adjustGameHeight();
         checklistColorApplication();
         filterQuestionSix();
         goToNextQuestion();
       },
       question7: function () {
         question7();
+        adjustGameHeight();
         checklistColorApplication();
         filterQuestionSeven();
         goToNextQuestion();
       },
       question8: function () {
         question8();
+        adjustGameHeight();
         checklistColorApplication();
         //goToNextQuestion();
       },
       question9: function () {
         question9();
+        adjustGameHeight();
         nonChecklistColorApplication();
         filterQuestionNine();
         goToNextQuestion();
       },
       question10: function () {
         question10();
+        adjustGameHeight();
         nonChecklistColorApplication();
         filterQuestionTen();
         //goToNextQuestion();

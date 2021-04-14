@@ -676,7 +676,7 @@ const displayResults = function () {
   backgroundImage.style.height = resultsBoxHeight + 175 + "px";
   backgroundImage.style.minHeight = "100%";
 
-  DOMSelectors.displayContainer.style.justifyContent = "initial";
+  /*  DOMSelectors.displayContainer.style.justifyContent = "initial"; */
 };
 
 export {
