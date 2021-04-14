@@ -1,5 +1,6 @@
 import { DOMSelectors } from "./DOM";
 import { questionsList } from "./questions.js";
+import { pickBackgroundImage } from "./home.js";
 
 const question1 = function () {
   DOMSelectors.gameBox.innerHTML = "";
@@ -363,12 +364,11 @@ const question10 = function () {
 
 //DISPLAY RESULTS
 const displayResults = function () {
-  document.body.innerHTML = "";
+  DOMSelectors.displayContainer.innerHTML = "";
 
-  document.body.insertAdjacentHTML(
+  DOMSelectors.displayContainer.insertAdjacentHTML(
     "afterbegin",
-    `<div class="bg-image" id="bg-image"></div>
-
+    `
         <div class="results-container">
     
             <div id="results-home" class="results-home">
@@ -395,24 +395,269 @@ const displayResults = function () {
 
         <!--Result 2-->
         <div class="card" id="card">
-        <h3 class="title-name">${finalArray[1].title}</h3>
+        <h3 class="title-name">${finalArray[2].title}</h3>
         <div class="card-data">
           <div class="anime-data-div">
-            <p class="synopsis anime-data">${finalArray[1].synopsis}</p><br>
-            <a target="_blank" rel="noopener noreferrer" href="${finalArray[1].link}" class="mal-link anime-data">Link to MAL</a> 
+            <p class="synopsis anime-data">${finalArray[2].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[2].link}" class="mal-link anime-data">Link to MAL</a> 
           </div>
           <div class="anime-img-div">
-            <img src="${finalArray[1].img_url}" alt="${finalArray[1].title} cover art"
+            <img src="${finalArray[2].img_url}" alt="${finalArray[2].title} cover art"
               class="anime-img">
-            <p class="genre anime-data">Genres: ${finalArray[1].genre}</p>
-            <p class="air-date anime-data">Air date: ${finalArray[1].aired}</p>
-            <p class="episodes anime-data">Episodes: ${finalArray[1].episodes}</p>
-            <p class="mal-score anime-data">MAL Score: ${finalArray[1].score}</p>
+            <p class="genre anime-data">Genres: ${finalArray[2].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[2].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[2].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[2].score}</p>
           </div>
         </div>
       </div>
 
+      <!--Result 3-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[2].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[2].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[2].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[2].img_url}" alt="${finalArray[2].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[2].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[2].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[2].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[2].score}</p>
+          </div>
+        </div>
+      </div>
 
+      <!--Result 4-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[3].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[3].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[3].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[3].img_url}" alt="${finalArray[3].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[3].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[3].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[3].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[3].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 5-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[4].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[4].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[4].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[4].img_url}" alt="${finalArray[4].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[4].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[4].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[4].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[4].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 6-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[5].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[5].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[5].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[5].img_url}" alt="${finalArray[5].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[5].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[5].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[5].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[5].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 7-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[6].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[6].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[6].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[6].img_url}" alt="${finalArray[6].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[6].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[6].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[6].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[6].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 8-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[7].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[7].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[7].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[7].img_url}" alt="${finalArray[7].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[7].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[7].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[7].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[7].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 9-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[8].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[8].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[8].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[8].img_url}" alt="${finalArray[8].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[8].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[8].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[8].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[8].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 10-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[9].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[9].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[9].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[9].img_url}" alt="${finalArray[9].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[9].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[9].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[9].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[9].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 11-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[10].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[10].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[10].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[10].img_url}" alt="${finalArray[10].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[10].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[10].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[10].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[10].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 12-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[11].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[11].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[11].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[11].img_url}" alt="${finalArray[11].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[11].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[11].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[11].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[11].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 13-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[12].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[12].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[12].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[12].img_url}" alt="${finalArray[12].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[12].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[12].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[12].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[12].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 14-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[13].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[13].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[13].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[13].img_url}" alt="${finalArray[13].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[13].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[13].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[13].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[13].score}</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Result 15-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[14].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[14].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[14].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[14].img_url}" alt="${finalArray[14].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[14].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[14].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[14].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[14].score}</p>
+          </div>
+        </div>
+      </div>
 
         <a href="/src/index.html" class="retake-quiz-btn anime-data">Retake Quiz</a> <!-- OPEN IN NEW TAB -->
 
@@ -420,15 +665,18 @@ const displayResults = function () {
     </div>`
   );
 
+  pickBackgroundImage();
   //HEIGHT OF BACKGROUND
-  const gameBox = document.getElementById("game");
-  console.log(gameBox);
-  const gameBoxHeight = gameBox.offsetHeight;
-  console.log(gameBoxHeight);
+  const resultsBox = document.getElementById("results-home");
+  console.log(resultsBox);
+  const resultsBoxHeight = resultsBox.offsetHeight;
+  console.log(resultsBoxHeight);
 
   const backgroundImage = document.getElementById("bg-image");
-  backgroundImage.style.height = gameBoxHeight + 175 + "px";
+  backgroundImage.style.height = resultsBoxHeight + 175 + "px";
   backgroundImage.style.minHeight = "100%";
+
+  DOMSelectors.displayContainer.style.justifyContent = "initial";
 };
 
 export {

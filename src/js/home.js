@@ -29,16 +29,20 @@ const imagesClass = [
   ]; */
 ];
 
-const randomNumberBgImage = Math.floor(Math.random() * imagesClass.length);
-const bgImage = imagesClass[randomNumberBgImage];
-//console.log(bgImage);
-//let bgImage = "url(" + images[randomNumber] + ")";
-//document.getElementsByClassName("bg-image").style.backgroundImage = "bgImage";
-const imgClass = document.getElementsByClassName("bg-image")[0];
-//console.log(imgClass);
+const pickBackgroundImage = function () {
+  const randomNumberBgImage = Math.floor(Math.random() * imagesClass.length);
+  const bgImage = imagesClass[randomNumberBgImage];
+  //console.log(bgImage);
+  //let bgImage = "url(" + images[randomNumber] + ")";
+  //document.getElementsByClassName("bg-image").style.backgroundImage = "bgImage";
+  const imgClass = document.getElementsByClassName("bg-image")[0];
+  //console.log(imgClass);
 
-document.addEventListener("DOMContentLoaded", function () {
-  imgClass.classList.add(bgImage);
-});
+  document.addEventListener("DOMContentLoaded", function () {
+    imgClass.classList.add(bgImage);
+  });
+};
+pickBackgroundImage();
 
+export { pickBackgroundImage };
 //ssss
