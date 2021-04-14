@@ -361,6 +361,76 @@ const question10 = function () {
   );
 };
 
+//DISPLAY RESULTS
+const displayResults = function () {
+  document.body.innerHTML = "";
+
+  document.body.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="bg-image" id="bg-image"></div>
+
+        <div class="results-container">
+    
+            <div id="results-home" class="results-home">
+                <h1 class="rec-title">Your Recommendations</h1>
+
+                <!--Result 1-->
+        <div class="card" id="card">
+          <h3 class="title-name">${finalArray[0].title}</h3>
+          <div class="card-data">
+            <div class="anime-data-div">
+              <p class="synopsis anime-data">${finalArray[0].synopsis}</p><br>
+              <a target="_blank" rel="noopener noreferrer" href="${finalArray[0].link}" class="mal-link anime-data">Link to MAL</a> 
+            </div>
+            <div class="anime-img-div">
+              <img src="${finalArray[0].img_url}" alt="${finalArray[0].title} cover art"
+                class="anime-img">
+              <p class="genre anime-data">Genres: ${finalArray[0].genre}</p>
+              <p class="air-date anime-data">Air date: ${finalArray[0].aired}</p>
+              <p class="episodes anime-data">Episodes: ${finalArray[0].episodes}</p>
+              <p class="mal-score anime-data">MAL Score: ${finalArray[0].score}</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Result 2-->
+        <div class="card" id="card">
+        <h3 class="title-name">${finalArray[1].title}</h3>
+        <div class="card-data">
+          <div class="anime-data-div">
+            <p class="synopsis anime-data">${finalArray[1].synopsis}</p><br>
+            <a target="_blank" rel="noopener noreferrer" href="${finalArray[1].link}" class="mal-link anime-data">Link to MAL</a> 
+          </div>
+          <div class="anime-img-div">
+            <img src="${finalArray[1].img_url}" alt="${finalArray[1].title} cover art"
+              class="anime-img">
+            <p class="genre anime-data">Genres: ${finalArray[1].genre}</p>
+            <p class="air-date anime-data">Air date: ${finalArray[1].aired}</p>
+            <p class="episodes anime-data">Episodes: ${finalArray[1].episodes}</p>
+            <p class="mal-score anime-data">MAL Score: ${finalArray[1].score}</p>
+          </div>
+        </div>
+      </div>
+
+
+
+        <a href="/src/index.html" class="retake-quiz-btn anime-data">Retake Quiz</a> <!-- OPEN IN NEW TAB -->
+
+        </div>
+    </div>`
+  );
+
+  //HEIGHT OF BACKGROUND
+  const gameBox = document.getElementById("game");
+  console.log(gameBox);
+  const gameBoxHeight = gameBox.offsetHeight;
+  console.log(gameBoxHeight);
+
+  const backgroundImage = document.getElementById("bg-image");
+  backgroundImage.style.height = gameBoxHeight + 175 + "px";
+  backgroundImage.style.minHeight = "100%";
+};
+
 export {
   question1,
   question2,
@@ -372,6 +442,7 @@ export {
   question8,
   question9,
   question10,
+  displayResults,
 };
 
-//ssssssss
+//sssssssss

@@ -12,6 +12,7 @@ import {
   question8,
   question9,
   question10,
+  displayResults,
 } from "./questionFunctions.js";
 
 question1();
@@ -567,11 +568,11 @@ const filterQuestionTen = function () {
       ];
       console.log(finalBottomFive);
 
-      const finalArray = finalTopFive.concat(finalBottomFive);
+      finalArray = finalTopFive.concat(finalBottomFive);
       console.log(finalArray);
 
-      console.log(finalArray);
-      alert(finalArray);
+      /* console.log(finalArray);
+      alert(finalArray); */
     }
 
     if (document.getElementById("choice-10-2").classList.contains("correct")) {
@@ -617,7 +618,7 @@ const filterQuestionTen = function () {
       ];
       console.log(finalBottomFive);
 
-      const finalArray = finalTopFive.concat(finalBottomFive);
+      finalArray = finalTopFive.concat(finalBottomFive);
       console.log(finalArray);
     }
 
@@ -627,13 +628,27 @@ const filterQuestionTen = function () {
       finalArray = finalByRank.slice(0, 15);
       console.log(finalArray);
     }
+    console.log(finalArray);
+
+    displayResults();
+
+    if (document.getElementById("choice-10-1").classList.contains("correct")) {
+      displayResults();
+    }
+
+    if (document.getElementById("choice-10-2").classList.contains("correct")) {
+      displayResults();
+    }
+
+    if (document.getElementById("choice-10-3").classList.contains("correct")) {
+      displayResults();
+    }
   });
 };
-
-const finalArrayExport = finalArray;
-export { finalArrayExport };
 
 //Add order final array by rank
 /* alert(finalArrayExport); */
 
-//sssss
+//sssssss
+
+//console.log(document.querySelector("a.finish-button"));
